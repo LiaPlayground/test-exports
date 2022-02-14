@@ -1,6 +1,14 @@
 # test-exports
 
 
+https://www.npmjs.com/package/@liascript/exporter
+
+Install the exporter via:
+
+``` bash
+npm install -g --verbose @liascript/exporter
+```
+
 ## SCORM1.2
 
 ``` bash
