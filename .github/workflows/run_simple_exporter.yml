@@ -32,7 +32,10 @@ jobs:
            git add ${{ env.OUTPUT_PATH }}/scorm2004.zip
            # scorm2004-iframe
            liaex -i ${{ env.INPUT_LIA }} -f scorm2004 -o ${{ env.OUTPUT_PATH }}/scorm2004 --scorm-iframe
-           git add ${{ env.OUTPUT_PATH }}/scorm12-iframe.zip
+           git add ${{ env.OUTPUT_PATH }}/scorm2004-iframe.zip
+           # pdf
+           liaex -i ${{ env.INPUT_LIA }} -f pdf
+           git add ${{ env.OUTPUT_PATH }}/output.pdf
 
     - name: Commit changes
       run: |
