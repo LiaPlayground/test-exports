@@ -1,12 +1,22 @@
-# test-exports
+# LiaScript Exporter evalution
 
-https://www.npmjs.com/package/@liascript/exporter
+This project provides an automated export mechanism for a LiaScript document and illustrates the current state of the exporter implementation. A Github Action generates 
 
-Install the exporter via:
+| Type       | Link                                                                                |
+|------------|-------------------------------------------------------------------------------------|
+| 'scorm2004' | [scorm2004s.zip](https://github.com/LiaPlayground/test-exports/blob/dev/export/scorm2004.zip) |
 
-``` bash
-npm install -g --verbose @liascript/exporter
-```
+
+for a [LiaScript file](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/test-exports/dev/LiaScriptCourse/LiaScript.md#1) locate in `LiaScriptCourse` repository root. The output is available in `export`. All parameters can be adapted to your needs. Feel free to clone the repository and start your project.
+
+General information about LiaScript can be found on [Project Website](https://liascript.github.io/) or in [user documentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md#1)
+                                                                                                             |
+
+> __Currently, we improve the export functions. If you identify a problem or an interesting feature, do not hesitate to contact us. Just initiate an Issue here in Github.__
+
+
+
+
 
 ## SCORM1.2
 
