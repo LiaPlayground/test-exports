@@ -27,15 +27,12 @@ jobs:
 
     - name: Generate export
       run: | 
+           # scorm2004
            liaex -i ${{ env.INPUT_LIA }} -f scorm2004 -o ${{ env.OUTPUT_PATH }}/scorm2004
            git add ${{ env.OUTPUT_PATH }}/scorm2004.zip
-
-    - name: Update history file
-      run: | 
-           echo -n "$(date +%d-%m-%Y_%H-%M-%S)" | tee -a ${{ env.OUTPUT_PATH }}/history.md
-           echo -n " - ${{ github.event.pusher.name }} - " | tee -a ${{ env.OUTPUT_PATH }}/history.md
-           echo "${{ github.event.head_commit.message }}" | tee -a ${{ env.OUTPUT_PATH }}/history.md
-           git add ${{ env.OUTPUT_PATH }}/history.md
+           # scorm2004-iframe
+           liaex -i ${{ env.INPUT_LIA }} -f scorm2004 -o ${{ env.OUTPUT_PATH }}/scorm2004 --scorm-iframe
+           git add ${{ env.OUTPUT_PATH }}/scorm12-iframe.zip
 
     - name: Commit changes
       run: |
