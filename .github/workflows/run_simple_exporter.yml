@@ -4,10 +4,12 @@ on: push
 jobs:
   export-job:
     runs-on: ubuntu-latest
+
     env:
         LIA_FILE_NAME: "LiaScript.md"
-        ROOT_FOLDER_NAME: "Simple_LiaDocument"
+        ROOT_FOLDER_NAME: "LiaScriptCourse"
         OUTPUT_FOLDER_NAME: "export"
+
     steps:    
     - name: Install dependencies
       run: |
@@ -20,7 +22,7 @@ jobs:
 
     - name: Set folders
       run: |
-           echo "OUTPUT_PATH=$(echo $ROOT_FOLDER_NAME/$OUTPUT_FOLDER_NAME)" >> $GITHUB_ENV
+           echo "OUTPUT_PATH=$(echo $OUTPUT_FOLDER_NAME)" >> $GITHUB_ENV
            echo "INPUT_LIA=$(echo $ROOT_FOLDER_NAME/$LIA_FILE_NAME)" >> $GITHUB_ENV
 
     - name: Generate export
@@ -32,7 +34,7 @@ jobs:
       run: | 
            echo -n "$(date +%d-%m-%Y_%H-%M-%S)" | tee -a ${{ env.OUTPUT_PATH }}/history.md
            echo -n " - ${{ github.event.pusher.name }} - " | tee -a ${{ env.OUTPUT_PATH }}/history.md
-           echo -n "${{ github.event.head_commit.message }}" | tee -a ${{ env.OUTPUT_PATH }}/history.md
+           echo "${{ github.event.head_commit.message }}" | tee -a ${{ env.OUTPUT_PATH }}/history.md
            git add ${{ env.OUTPUT_PATH }}/history.md
 
     - name: Commit changes
