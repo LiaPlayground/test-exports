@@ -31,9 +31,9 @@ jobs:
     - name: Update history file
       run: | 
            echo "---------------------------------------" > ${{ env.OUTPUT_PATH }}/history.md
-           echo "$(date +%d-%m-%Y_%H-%M-%S)" > ${{ env.OUTPUT_PATH }}/history.md
-           echo "${{ github.event.head_commit.message }}" > ${{ env.OUTPUT_PATH }}/history.md
-           echo "${{ github.event.pusher.name }}" > ${{ env.OUTPUT_PATH }}/history.md
+           echo "$(date +%d-%m-%Y_%H-%M-%S)" | tee -a ${{ env.OUTPUT_PATH }}/history.md
+           echo "${{ github.event.head_commit.message }}" | tee -a ${{ env.OUTPUT_PATH }}/history.md
+           echo "${{ github.event.pusher.name }}" | tee -a ${{ env.OUTPUT_PATH }}/history.md
            cat ${{ env.OUTPUT_PATH }}/history.md
            git add ${{ env.OUTPUT_PATH }}/history.md
 
