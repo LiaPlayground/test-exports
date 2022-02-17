@@ -1,9 +1,27 @@
-name: hello-world
+name: Execute_simple_exporter
 on: push
+
 jobs:
-  my-job:
+  export-job:
     runs-on: ubuntu-latest
-    steps:
-      - name: Install dependencies
-        run: |
-             npm install -g @liascript/exporter --unsafe-perm
+    env:
+        LIA_FILE_NAME: "LiaScript.md"
+        ROOT_FOLDER_NAME: "Simple_LiaDocument"
+        OUTPUT_FOLDER_NAME: "export"
+    steps:    
+
+    - name: Generate export
+      run: | 
+           echo "OUTPUT_PATH=$(echo $ROOT_FOLDER_NAME/$OUTPUT_FOLDER_NAME)" >> $GITHUB_ENV
+           echo "------------------------------"
+           echo ${{ env.OUTPUT_PATH }}
+           echo "*******************************"
+           #liaex -i ${ROOT_FOLDER_NAME}/${LIA_FILE_NAME} -f scorm2004 -o ${OUTPUT_PATH}/scorm2004
+
+    - name: Check export files
+      run: | 
+           ls -all
+           cd ${ROOT_FOLDER_NAME}
+           ls -all
+           cd ${OUTPUT_FOLDER_NAME}
+           ls -all
