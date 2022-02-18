@@ -49,6 +49,7 @@ jobs:
 
            # web-project
            liaex -i ${{ env.INPUT_LIA }} -f web -o ${{ env.OUTPUT_PATH }}/webproject
+           zip -r -q  ${{ env.OUTPUT_PATH }}/webproject.zip ${{ env.OUTPUT_PATH }}/webproject
            git add ${{ env.OUTPUT_PATH }}/webproject.zip
 
     - name: Commit all export results
