@@ -2,16 +2,16 @@
 
 This project provides an automated export mechanism for a LiaScript document and illustrates the current state of the exporter implementation. After committing changes related to the  [LiaScript file](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/test-exports/dev/LiaScriptCourse/LiaScript.md#1) located in `LiaScriptCourse` a Github Action generates 
 
-| Type       | Link                                                                                |
-|------------|-------------------------------------------------------------------------------------|
-| `scorm2004` | [scorm2004s.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/scorm2004.zip) |
-| `scorm2004-iframe` | [scorm2004s.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/scorm2004-iframe.zip) |
-| `scorm1.2` |   |
-| `scorm1.2-iframe` |   |
-| `pdf` | [portableDocumentFormat.pdf](https://github.com/LiaPlayground/test-exports/raw/dev/export/portableDocumentFormat.pdf) |
-| `web` |   |
+| Type               | Link                                                                                                                  |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| `scorm2004`        | [scorm2004.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/scorm2004.zip)                           |
+| `scorm2004-iframe` | [scorm2004-iframe.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/scorm2004-iframe.zip)             |
+| `scorm1.2`         | [scorm12.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/scorm12s.zip)                             |
+| `scorm1.2-iframe`  | [scorm12-iframe.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/scorm12-iframe.zip)                 |
+| `pdf`              | [portableDocumentFormat.pdf](https://github.com/LiaPlayground/test-exports/raw/dev/export/portableDocumentFormat.pdf) |
+| Webprojekt         | [webproject.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/webproject.zip)                         |
 
-All outputs are available in the `export` folder. Feel free to clone the repository and start your project.
+All outputs are available in the `export` folder. Feel free to clone the repository and start your own project.
 
 General information about LiaScript can be found on [Project Website](https://liascript.github.io/) or in [user documentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md#1)
                                                                                                              |
@@ -28,7 +28,6 @@ jobs:
   export-job:
     runs-on: ubuntu-latest
 
-    # This 
     env:
         LIA_FILE_NAME: "LiaScript.md"
         ROOT_FOLDER_NAME: "LiaScriptCourse"
@@ -54,14 +53,28 @@ jobs:
            # scorm2004
            liaex -i ${{ env.INPUT_LIA }} -f scorm2004 -o ${{ env.OUTPUT_PATH }}/scorm2004
            git add ${{ env.OUTPUT_PATH }}/scorm2004.zip
+
            # scorm2004-iframe
-           liaex -i ${{ env.INPUT_LIA }} -f scorm2004 -o ${{ env.OUTPUT_PATH }}/c --scorm-iframe
+           liaex -i ${{ env.INPUT_LIA }} -f scorm2004 -o ${{ env.OUTPUT_PATH }}/scorm2004-iframe --scorm-iframe
            git add ${{ env.OUTPUT_PATH }}/scorm2004-iframe.zip
+
+           # scorm1.2
+           liaex -i ${{ env.INPUT_LIA }} -f scorm1.2 -o ${{ env.OUTPUT_PATH }}/scorm12
+           git add ${{ env.OUTPUT_PATH }}/scorm12.zip
+
+           # scorm1.2-iframe
+           liaex -i ${{ env.INPUT_LIA }} -f scorm1.2 -o ${{ env.OUTPUT_PATH }}/scorm12-iframe --scorm-iframe
+           git add ${{ env.OUTPUT_PATH }}/scorm12-iframe.zip
+
            # pdf
            liaex -i ${{ env.INPUT_LIA }} -f pdf -o ${{ env.OUTPUT_PATH }}/portableDocumentFormat
            git add ${{ env.OUTPUT_PATH }}/portableDocumentFormat.pdf
 
-    - name: Commit all changes
+           # web-project
+           liaex -i ${{ env.INPUT_LIA }} -f web -o ${{ env.OUTPUT_PATH }}/webproject
+           git add ${{ env.OUTPUT_PATH }}/webproject.zip
+
+    - name: Commit all export results
       run: |
            git config --local user.email "action@github.com"
            git config --local user.name "GitHub Action"

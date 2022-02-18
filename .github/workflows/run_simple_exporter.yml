@@ -47,6 +47,10 @@ jobs:
            liaex -i ${{ env.INPUT_LIA }} -f pdf -o ${{ env.OUTPUT_PATH }}/portableDocumentFormat
            git add ${{ env.OUTPUT_PATH }}/portableDocumentFormat.pdf
 
+           # web-project
+           liaex -i ${{ env.INPUT_LIA }} -f web -o ${{ env.OUTPUT_PATH }}/webproject
+           git add ${{ env.OUTPUT_PATH }}/webproject.zip
+
     - name: Commit all export results
       run: |
            git config --local user.email "action@github.com"
