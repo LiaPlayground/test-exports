@@ -1,4 +1,4 @@
-name: Execute_simple_exporter
+name: Execute_liascript_exporters
 on: push
 
 jobs:
@@ -31,13 +31,13 @@ jobs:
            liaex -i ${{ env.INPUT_LIA }} -f scorm2004 -o ${{ env.OUTPUT_PATH }}/scorm2004
            git add ${{ env.OUTPUT_PATH }}/scorm2004.zip
            # scorm2004-iframe
-           liaex -i ${{ env.INPUT_LIA }} -f scorm2004 -o ${{ env.OUTPUT_PATH }}/scorm2004-iframe --scorm-iframe
+           liaex -i ${{ env.INPUT_LIA }} -f scorm2004 -o ${{ env.OUTPUT_PATH }}/c --scorm-iframe
            git add ${{ env.OUTPUT_PATH }}/scorm2004-iframe.zip
            # pdf
            liaex -i ${{ env.INPUT_LIA }} -f pdf -o ${{ env.OUTPUT_PATH }}/portableDocumentFormat
            git add ${{ env.OUTPUT_PATH }}/portableDocumentFormat.pdf
 
-    - name: Commit changes
+    - name: Commit all changes
       run: |
            git config --local user.email "action@github.com"
            git config --local user.name "GitHub Action"
