@@ -31,11 +31,11 @@ jobs:
            liaex -i ${{ env.INPUT_LIA }} -f scorm2004 -o ${{ env.OUTPUT_PATH }}/scorm2004
            git add ${{ env.OUTPUT_PATH }}/scorm2004.zip
            # scorm2004-iframe
-           liaex -i ${{ env.INPUT_LIA }} -f scorm2004 -o ${{ env.OUTPUT_PATH }}/scorm2004 --scorm-iframe
+           liaex -i ${{ env.INPUT_LIA }} -f scorm2004 -o ${{ env.OUTPUT_PATH }}/scorm2004-iframe --scorm-iframe
            git add ${{ env.OUTPUT_PATH }}/scorm2004-iframe.zip
            # pdf
-           liaex -i ${{ env.INPUT_LIA }} -f pdf
-           git add ${{ env.OUTPUT_PATH }}/output.pdf
+           liaex -i ${{ env.INPUT_LIA }} -f pdf -o ${{ env.OUTPUT_PATH }}/portableDocumentFormat
+           git add ${{ env.OUTPUT_PATH }}/portableDocumentFormat.pdf
 
     - name: Commit changes
       run: |
