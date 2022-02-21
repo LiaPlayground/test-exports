@@ -44,7 +44,7 @@ jobs:
            git add ${{ env.OUTPUT_PATH }}/scorm12-iframe.zip
 
            # ims
-           liaex -i ${{ env.INPUT_LIA }} -f ims -o ${{ env.OUTPUT_PATH }}/ims --ims-indexeddb
+           liaex -i ${{ env.INPUT_LIA }} -f ims -o ${{ env.OUTPUT_PATH }}/ims #--ims-indexeddb
            git add ${{ env.OUTPUT_PATH }}/ims.zip
 
            # pdf
