@@ -43,13 +43,16 @@ jobs:
            liaex -i ${{ env.INPUT_LIA }} -f scorm1.2 -o ${{ env.OUTPUT_PATH }}/scorm12-iframe --scorm-iframe
            git add ${{ env.OUTPUT_PATH }}/scorm12-iframe.zip
 
+           # ims
+           liaex -i ${{ env.INPUT_LIA }} -f ims -o ${{ env.OUTPUT_PATH }}/ims --ims-indexeddb
+           git add ${{ env.OUTPUT_PATH }}/ims.zip
+
            # pdf
            liaex -i ${{ env.INPUT_LIA }} -f pdf -o ${{ env.OUTPUT_PATH }}/portableDocumentFormat
            git add ${{ env.OUTPUT_PATH }}/portableDocumentFormat.pdf
 
            # web-project
-           liaex -i ${{ env.INPUT_LIA }} -f web -o ${{ env.OUTPUT_PATH }}/webproject
-           zip -r -q  ${{ env.OUTPUT_PATH }}/webproject.zip ${{ env.OUTPUT_PATH }}/webproject
+           liaex -i ${{ env.INPUT_LIA }} -f web -o ${{ env.OUTPUT_PATH }}/webproject --web-zip
            git add ${{ env.OUTPUT_PATH }}/webproject.zip
 
     - name: Commit all export results
