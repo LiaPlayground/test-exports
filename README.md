@@ -6,13 +6,13 @@ The project applies the exporter for LiaScript documents in a continous deployme
 
 | Type               | Link                                                                                                                  |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------- |
-| `SCORM 20004`        | [scorm2004.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/scorm2004.zip)                           |
-| `SCORM 20004 with Iframe` | [scorm2004-iframe.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/scorm2004-iframe.zip)             |
-| `SCORM 1.2`         | [scorm12.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/scorm12.zip)                              |
-| `SCORM 1.2 with Iframe`  | [scorm12-iframe.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/scorm12-iframe.zip)                 |
-| `IMS-LTI`              | [ims.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/ims.zip)                 |
-| `pdf`              | [portableDocumentFormat.pdf](https://github.com/LiaPlayground/test-exports/raw/dev/export/portableDocumentFormat.pdf) |
-| Webprojekt         | [webproject.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/webproject.zip)                         |
+| `SCORM 20004`        | [scorm2004.zip](https://github.com/LiaPlayground/test-exports/raw/main/export/scorm2004.zip)                           |
+| `SCORM 20004 with Iframe` | [scorm2004-iframe.zip](https://github.com/LiaPlayground/test-exports/raw/main/export/scorm2004-iframe.zip)             |
+| `SCORM 1.2`         | [scorm12.zip](https://github.com/LiaPlayground/test-exports/raw/main/export/scorm12.zip)                              |
+| `SCORM 1.2 with Iframe`  | [scorm12-iframe.zip](https://github.com/LiaPlayground/test-exports/raw/main/export/scorm12-iframe.zip)                 |
+| `IMS-LTI`              | [ims.zip](https://github.com/LiaPlayground/test-exports/raw/main/export/ims.zip)                 |
+| `pdf`              | [portableDocumentFormat.pdf](https://github.com/LiaPlayground/test-exports/raw/main/export/portableDocumentFormat.pdf) |
+| Webprojekt         | [webproject.zip](https://github.com/LiaPlayground/test-exports/raw/main/export/webproject.zip)                         |
 
 All outputs are available in the `export` folder.
 
