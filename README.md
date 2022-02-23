@@ -1,53 +1,21 @@
-# test-exports
+# LiaScript Exporter Application
 
+> Upload your LiaScript file and generate SCORM, IMS-LTI or PDF files automatically.  
 
-https://www.npmjs.com/package/@liascript/exporter
+The project applies the exporter for LiaScript documents in a continous deployment toolchain. After committing changes related to the [LiaScript file](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/test-exports/dev/LiaScriptCourse/LiaScript.md#1) located in `LiaScriptCourse` a Github Action generates
 
-Install the exporter via:
+| Type               | Link                                                                                                                  |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| `SCORM 20004`        | [scorm2004.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/scorm2004.zip)                           |
+| `SCORM 20004 with Iframe` | [scorm2004-iframe.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/scorm2004-iframe.zip)             |
+| `SCORM 1.2`         | [scorm12.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/scorm12.zip)                              |
+| `SCORM 1.2 with Iframe`  | [scorm12-iframe.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/scorm12-iframe.zip)                 |
+| `IMS-LTI`              | [ims.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/ims.zip)                 |
+| `pdf`              | [portableDocumentFormat.pdf](https://github.com/LiaPlayground/test-exports/raw/dev/export/portableDocumentFormat.pdf) |
+| Webprojekt         | [webproject.zip](https://github.com/LiaPlayground/test-exports/raw/dev/export/webproject.zip)                         |
 
-``` bash
-npm install -g --verbose @liascript/exporter
-```
+All outputs are available in the `export` folder.
 
-## SCORM1.2
-
-``` bash
-liaex -i LiaScriptProject/markdown/LiaScript.md --path LiaScriptProject -f scorm1.2 -o scorm12
-```
-
-[output](scorm12.zip)
-
-## SCORM1.2 within an iframe
-
-
-``` bash
-liaex -i LiaScriptProject/markdown/LiaScript.md --path LiaScriptProject -f scorm1.2 -o scorm12 --scorm-iframe
-```
-
-[output](scorm12-iframe.zip)
-
-## SCORM2004
-
-``` bash
-liaex -i LiaScriptProject/markdown/LiaScript.md --path LiaScriptProject -f scorm2004 -o scorm2004
-```
-
-[output](scorm2004.zip)
-
-
-## SCORM2004 within an iframe
-
-``` bash
-liaex -i LiaScriptProject/markdown/LiaScript.md --path LiaScriptProject -f scorm2004 -o scorm2004 --scorm-iframe
-```
-
-[output](scorm2004-iframe.zip)
-
-## PDF
-
-
-``` bash
-liaex -i LiaScriptProject/markdown/LiaScript.md -f pdf
-```
-
-[output](./output.pdf)
+General information about LiaScript can be found on [Project Website](https://liascript.github.io/) or in [user documentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md#1)
+                                                                                                             |
+Feel free to clone the repository and start your own project :-)
