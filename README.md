@@ -2,7 +2,7 @@
 
 > Upload your LiaScript file and generate SCORM, IMS-LTI or PDF files automatically.  
 
-The project applies the exporter for LiaScript documents in a continous deployment toolchain. After committing changes related to the [LiaScript file](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/test-exports/dev/LiaScriptCourse/LiaScript.md#1) located in `LiaScriptCourse` a Github Action generates 
+The project applies the exporter for LiaScript documents in a continous deployment toolchain. After committing changes related to the [LiaScript file](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/test-exports/dev/LiaScriptCourse/LiaScript.md#1) located in `LiaScriptCourse` a Github Action generates
 
 | Type               | Link                                                                                                                  |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------- |
