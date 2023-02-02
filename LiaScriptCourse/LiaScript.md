@@ -16,7 +16,9 @@ import:   https://raw.githubusercontent.com/liaTemplates/AVR8js/main/README.md
 
 # Example Course
 
-This course illustrates the export of LiaScript based learning content. Visit the youtube channel of LiaScript to get an overview about already implemented features.
+This course illustrates the export of LiaScript based learning content. The different formates are available in the `export` folder of the project.
+
+Visit the youtube channel of LiaScript to get an overview about already implemented features.
 
 !?[LiaScript](https://www.youtube.com/watch?v=vogB3gKlszM&t=70s)
 
