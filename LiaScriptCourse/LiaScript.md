@@ -16,7 +16,7 @@ import:   https://raw.githubusercontent.com/liaTemplates/AVR8js/main/README.md
 
 # Example Course
 
-This course illustrates the integration of LiaScript based learning content in Learning Management Systems. Visit the youtube channel of LiaScript to get an overview about already implemented features.
+This course illustrates the export of LiaScript based learning content. Visit the youtube channel of LiaScript to get an overview about already implemented features.
 
 !?[LiaScript](https://www.youtube.com/watch?v=vogB3gKlszM&t=70s)
 
