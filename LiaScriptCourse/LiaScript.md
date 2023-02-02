@@ -10,7 +10,7 @@ import:   https://raw.githubusercontent.com/liaTemplates/AVR8js/main/README.md
           https://raw.githubusercontent.com/liascript-templates/plantUML/master/README.md
           https://github.com/LiaTemplates/PeriodicTable/blob/main/README.md
           https://github.com/LiaTemplates/Pyodide
-          https://liascript.github.io/course/?https://github.com/liascript/CodeRunner
+          https://github.com/liascript/CodeRunner
           https://raw.githubusercontent.com/liaTemplates/vtk/master/README.md
 -->
 
@@ -125,7 +125,7 @@ foreach(int prime in primes) Console.Write($" {prime}");
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 </Project>
 ```
